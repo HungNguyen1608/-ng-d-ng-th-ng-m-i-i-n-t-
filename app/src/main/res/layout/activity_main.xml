@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+
+                android:textStyle="bold"
+                android:id="@+id/toolbarmanhinhchinh"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+                <LinearLayout
+                    android:layout_gravity="right"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize">
+                    <ImageView
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/imgmess"
+                        android:src="@drawable/ic_message_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="?attr/actionBarSize"/>
+
+                    <ImageView
+                        android:layout_marginRight="15dp"
+                        android:id="@+id/imgsearch"
+                        android:src="@drawable/ic_search_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="?attr/actionBarSize"/>
+                    <FrameLayout
+                        android:id="@+id/frameGioHang"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="?attr/actionBarSize">
+                        <com.nex3z.notificationbadge.NotificationBadge
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/menu_sl"
+                            android:layout_gravity="top|right"/>
+
+                        <ImageView
+                            android:layout_marginTop="20dp"
+                            android:layout_width="30dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_cart_24"/>
+
+                    </FrameLayout>
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+<!--            <com.denzcoskun.imageslider.ImageSlider-->
+<!--                android:id="@+id/image_slider"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="150dp"-->
+<!--                app:iss_auto_cycle="true"-->
+<!--                app:iss_period="1000"-->
+<!--                app:iss_delay="2000"-->
+<!--                app:iss_text_align="CENTER"/>-->
+            <!--            <ViewFlipper-->
+<!--                android:id="@+id/viewflipper"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="150dp"></ViewFlipper>-->
+            <FrameLayout
+                android:id="@+id/frame_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:background="@drawable/border_background"> <!-- Sử dụng drawable để tạo border -->
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/image_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:iss_auto_cycle="true"
+                    app:iss_period="1000"
+                    app:iss_delay="2000"
+                    app:iss_text_align="CENTER"/>
+
+            </FrameLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Bán Chạy"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtbanchay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Tất cả"
+                    android:textColor="#000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <HorizontalScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycleview1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" />
+
+                </HorizontalScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#E6E9EC">
+                <TextView
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sản phẩm mới nhất"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/recycleview"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp">
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start">
+            <ListView
+                android:id="@+id/listviewmanhinhchinh2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp" />
+            <ListView
+                android:id="@+id/listviewmanhinhchinh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="200dp" />
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

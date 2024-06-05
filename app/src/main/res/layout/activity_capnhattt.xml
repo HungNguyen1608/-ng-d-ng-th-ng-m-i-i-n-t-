@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activity.CapnhapttActivity"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            app:title="Cập nhật thông tin"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:id="@+id/toolbarcntt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </androidx.appcompat.widget.Toolbar>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="#109D58"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/edit_emailuser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Địa chỉ email"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="74dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout5">
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Số Điện Thoại "
+                android:textColor="#109D58"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_sdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Số điện thoại"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+            <TextView
+                android:id="@+id/textView47"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mật Khẩu"
+                android:textColor="#109D58"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_edit_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đổi Mật Khẩu"
+                android:textColor="#ffffff"
+                android:backgroundTint="#109D58"
+                android:minHeight="48dp"
+                android:minWidth="100dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView30"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/btnchon_anh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:text="Chọn Ảnh"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.342"
+            app:layout_constraintStart_toEndOf="@+id/img_avatar" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="Ảnh đại diện"
+            android:textColor="#109D58"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_avatar">
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên Tài Khoản "
+                android:textColor="#109D58"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_tenuser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Tên tài khoản"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+            <TextView
+                android:id="@+id/textView49"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Địa chỉ"
+                android:textColor="#109D58"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_diachi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Địa chỉ"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+        </LinearLayout>
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/edhinhanhus"
+            android:layout_width="wrap_content"
+            android:minWidth="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="44dp"
+            android:layout_weight="4"
+            android:hint="Hình ảnh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.159"
+            app:layout_constraintStart_toEndOf="@+id/img_avatar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/luu"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout30">
+
+        <Button
+            android:textColor="#109D58"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:id="@+id/btncapnhat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="5dp"
+            android:text="Lưu Thay Đổi"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

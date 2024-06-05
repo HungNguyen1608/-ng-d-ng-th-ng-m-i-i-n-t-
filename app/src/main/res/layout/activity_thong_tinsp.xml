@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ThongTinspActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="387dp">
+
+                <ImageView
+                    app:srcCompat="@mipmap/ic_launcher_round"
+                    android:id="@+id/imgchitiet"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <ImageView
+                    android:id="@+id/imgbg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_cart_24" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_nameSPItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="60dp"
+                    android:text="Tên sản phẩm"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_GiaItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="20.000/kg"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_nameSPItem" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toEndOf="@+id/constraintLayout15"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imagest1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imagest2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imagest3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/imagest4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imagest5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout15"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <ImageView
+                        android:id="@+id/imgshop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </ImageView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tenshop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:text="TextView"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/constraintLayout15"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="268dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mota"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mô tả"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/danhgia"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/textView19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Đánh giá"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout3">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/danhgia_list"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_mota"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_width="match_parent"
+                                android:id="@+id/RC_Danhgia"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <TextView
+                        android:id="@+id/tv_mota"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="10dp"
+                        android:text="mô tả"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="200dp"
+            android:background="@drawable/addtocart"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:textColor="#fff"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Thêm Vào Giỏ Hàng"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="#00BFFF"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_mua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mua Ngay"
+                android:textColor="#fff"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

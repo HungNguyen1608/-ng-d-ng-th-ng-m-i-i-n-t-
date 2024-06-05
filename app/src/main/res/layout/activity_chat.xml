@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ChatActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        app:title="Tin nhắn"
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+<!--        <TextView-->
+<!--            android:textSize="20dp"-->
+<!--            android:text="Tin nhắn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content">-->
+<!--        </TextView>-->
+
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:weightSum="10"
+        android:id="@+id/line1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:padding="10dp"
+            android:id="@+id/editputtex"
+            android:layout_width="0dp"
+            android:textSize="15dp"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:layout_weight="8"
+            android:background="@drawable/back_inputtext"
+            android:hint="Nội dung chat"
+            android:textColorHint="#000"
+            tools:ignore="TouchTargetSizeCheck">
+
+        </EditText>
+        <ImageView
+            android:tint="#FF03DAC5"
+            android:layout_weight="2"
+            android:src="@drawable/ic_send_24"
+            android:id="@+id/imagechat"
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:ignore="UseAppTint">
+
+        </ImageView>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview_chat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/line1"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
+        tools:layout_editor_absoluteX="16dp"></androidx.recyclerview.widget.RecyclerView>
+</androidx.constraintlayout.widget.ConstraintLayout>

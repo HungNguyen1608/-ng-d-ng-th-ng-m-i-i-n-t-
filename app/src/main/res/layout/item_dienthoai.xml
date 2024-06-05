@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:weightSum="10"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:id="@+id/itemdt_image"
+            android:layout_weight="3"
+            android:src="@drawable/iconnew"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/itemdt_ten"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Tên sản phẩm"/>
+<!--            <TextView-->
+<!--                android:id="@+id/itemdt_idsp"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="10sp"-->
+<!--                android:text="ID: "/>-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemdt_gia"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:text="Giá: 250000d"
+                android:textColor="@android:color/holo_red_light"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemdt_mota"
+                android:layout_marginLeft="10dp"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="Mô tả: "/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

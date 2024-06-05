@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:background="@drawable/vongtext"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/item_img"
+                android:src="@drawable/ic_people_24"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+            <LinearLayout
+                android:layout_marginStart="5dp"
+                android:padding="2dp"
+                android:minHeight="80dp"
+                android:layout_toEndOf="@+id/item_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/item_tensp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="30dp"
+                    android:text="Mobile"
+                    android:textSize="15sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:minHeight="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/item_soluong"
+                        android:layout_width="147dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Số lượng: 2"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/item_trangthai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Trạng thái: "
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,133 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ThanhToanActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Thanh toán"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleviewthanhtoan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/edSodienthoai"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- EditText Số điện thoại -->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edSodienthoai"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_phone_24"
+        android:hint="Số điện thoại"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/recycleviewthanhtoan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- EditText Email -->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_email_24"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/edSodienthoai"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- EditText Địa chỉ -->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edDiachi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_location_24"
+        android:hint="Nhập địa chỉ giao hàng"
+        android:inputType="textPostalAddress"
+        app:layout_constraintTop_toBottomOf="@id/edEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- LinearLayout Tổng tiền -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/edDiachi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout10">
+
+        <!-- TextView Tổng tiền -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Tổng tiền:"
+            android:textColor="#EF1010"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- TextView Số tiền -->
+        <TextView
+            android:id="@+id/txtTongtien"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:text="200000 đ"
+            android:textColor="#EF1010"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"/>
+    </LinearLayout>
+
+    <!-- LinearLayout Buttons -->
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Button Đặt hàng khi nhận hàng -->
+        <Button
+            android:id="@+id/btnDathang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#b0006d"
+            android:text="Thanh toán khi nhận hàng" />
+
+        <!-- Button Thanh toán qua Zalo pay -->
+        <Button
+            android:id="@+id/btnDathangzalo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#008FE5"
+            android:text="Thanh toán qua Zalo pay" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

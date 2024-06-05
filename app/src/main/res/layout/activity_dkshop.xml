@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbardkshop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Đăng Ký Cửa Hàng"
+        android:background="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout30"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgavatar"
+            app:layout_constraintVertical_bias="0.013">
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên Shop"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tenshop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Tên Cửa Hàng"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgavatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView30"
+            tools:srcCompat="@tools:sample/avatars" />
+
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="76dp"
+            android:text="Avata"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/them"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <CheckBox
+            android:id="@+id/cbshop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="272dp"
+            android:text="Đồng ý chịu mọi trách nhiệm về sản phẩm"
+            app:layout_constraintBottom_toTopOf="@+id/them"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+        </CheckBox>
+
+        <Button
+            android:id="@+id/btndkshop"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="224dp"
+            android:text="Đăng Ký Cửa Hàng"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbshop" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

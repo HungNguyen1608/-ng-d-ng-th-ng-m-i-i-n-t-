@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ChiTietDonHangActivity">
+
+    <!-- ImageView để hiển thị hình ảnh sản phẩm -->
+
+    <!-- Guideline để tạo khoảng cách -->
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="181dp"
+        android:layout_height="216dp"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/txtsoluong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- TextView để hiển thị tên sản phẩm -->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txttensp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="5dp"
+        android:text="Tên sản phẩm"
+        android:textStyle="bold"
+        android:maxLines="3"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtsoluong"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="5dp"
+        android:text="Số lượng sản phẩm"
+        android:maxLines="3"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/txttensp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtgia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:text="12000000"
+        android:maxLines="3"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/txtsoluong" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txttinhtrang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:text="Chờ xác nhận"
+        android:maxLines="3"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/txtgia" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtnguoidat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:textStyle="bold"
+        android:text="Tên người đặt"
+        android:maxLines="3"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/txttinhtrang" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtemail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="1dp"
+        android:textStyle="bold"
+        android:text="Email"
+        android:maxLines="3"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/txtnguoidat" />
+
+
+
+    <RadioGroup
+        android:layout_marginTop="20dp"
+        android:id="@+id/linearCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img"
+        >
+
+        <!-- CheckBox để cập nhật trạng thái -->
+
+        <RadioButton
+            android:layout_marginStart="10dp"
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Đang chờ xử lý" />
+
+        <RadioButton
+            android:layout_marginStart="10dp"
+            android:id="@+id/rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xác nhận"/>
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Đang giao hàng" />
+
+        <RadioButton
+            android:layout_marginStart="10dp"
+            android:id="@+id/rb4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đã giao"/>
+
+        <RadioButton
+            android:layout_marginStart="10dp"
+            android:id="@+id/rb5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đã hủy"/>
+
+    </RadioGroup>
+    <!-- Button để cập nhật -->
+    <Button
+        android:id="@+id/btncapnhat"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginBottom="16dp"
+        android:text="Cập nhật"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

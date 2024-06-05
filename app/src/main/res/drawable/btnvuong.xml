@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#40C4FF" /> <!-- Màu nền của hình chữ nhật, có thể thay đổi -->
+    <corners android:radius="5dp" /> <!-- Điều chỉnh bán kính góc bo, đặt là 0dp để không có góc bo -->
+</shape>

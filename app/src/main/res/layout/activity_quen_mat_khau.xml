@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center"
+    tools:context=".activity.QuenMatKhauActivity">
+
+    <TextView
+        android:id="@+id/titleLogin"
+        android:text="Quên mật khẩu"
+        android:textSize="32sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edEmail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Nhập Email"
+            app:startIconDrawable="@drawable/ic_email_24"
+            app:hintTextColor="@color/black"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnquenmatkhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="12dp"
+            android:text="Quên mật khẩu"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
